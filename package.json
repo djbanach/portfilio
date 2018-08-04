@@ -9,7 +9,6 @@
   "author": "Daniel Banach",
   "license": "MIT",
   "dependencies": {
-    "node-sass": "^4.9.2",
-    "npm": "^6.3.0"
+    "node-sass": "^4.9.2"
   }
 }
