@@ -57,14 +57,14 @@
       height: 250px;
       background: url("../img/portrait1.jpg");
       border-radius: 50%;
-      border: solid 3px #eece1a; }
+      border: solid 3px #1d99ed; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #eece1a; }
+      color: #1d99ed; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -76,7 +76,7 @@
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #eece1a; }
+      color: #1d99ed; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -126,9 +126,39 @@ h3 {
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
-    margin-bottom: 2rem;
+    width: 25.5em;
     padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    background: rgba(73, 73, 73, 0.5);
+    overflow: hidden;
+    border-right: 0.15em solid #1d99ed;
+    white-space: nowrap;
+    margin: 0 0 2rem 0;
+    letter-spacing: 0.15em;
+    animation: typing 4s steps(60, end), blink-caret 0.75s step-end infinite; }
+  h1.sm-heading2,
+  h2.sm-heading2,
+  h3.sm-heading2 {
+    width: 15em;
+    padding: 0.2rem 1rem;
+    background: rgba(73, 73, 73, 0.5);
+    overflow: hidden;
+    border-right: 0.15em solid #1d99ed;
+    white-space: nowrap;
+    margin: 0 0 2rem 0;
+    letter-spacing: 0.15em;
+    animation: typing2 3s steps(40, end), blink-caret 0.75s step-end infinite; }
+  h1.sm-heading3,
+  h2.sm-heading3,
+  h3.sm-heading3 {
+    width: 20em;
+    padding: 0.2rem 1rem;
+    background: rgba(73, 73, 73, 0.5);
+    overflow: hidden;
+    border-right: 0.15em solid #1d99ed;
+    white-space: nowrap;
+    margin: 0 0 2rem 0;
+    letter-spacing: 0.15em;
+    animation: typing3 3s steps(50, end), blink-caret 0.75s step-end infinite; }
 
 a {
   color: #fff;
@@ -140,7 +170,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #eece1a; }
+  color: #1d99ed; }
 
 main {
   padding: 4rem;
@@ -150,7 +180,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #eece1a;
+        color: #1d99ed;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
@@ -166,7 +196,7 @@ main {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: #eece1a 3px solid; }
+    border: #1d99ed 3px solid; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
@@ -179,7 +209,7 @@ main {
   .about-info .job {
     background: #515151;
     padding: 0.5rem;
-    border-bottom: #eece1a 5px solid; }
+    border-bottom: #1d99ed 5px solid; }
 
 .projects {
   display: grid;
@@ -190,7 +220,7 @@ main {
     border: 3px #fff solid; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #eece1a;
+      border-color: #1d99ed;
       transition: all 0.5s ease-out; }
 
 .btn, .btn-dark, .btn-light {
@@ -199,7 +229,7 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #eece1a;
+    background: #1d99ed;
     color: #000; }
 
 .btn-dark {
@@ -216,6 +246,39 @@ main {
   background: #2b2b2b;
   color: #fff;
   height: 60px; }
+
+/*.sm-heading {
+  overflow: hidden;
+  border-right: 0.15em solid $secondary-color;
+  white-space: nowrap;
+  margin: 0 0;
+  letter-spacing: 0.15em;
+  animation: typing 4s steps(60, end), blink-caret 0.75s step-end infinite;
+}*/
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 25.5em; } }
+
+@keyframes typing2 {
+  from {
+    width: 0; }
+  to {
+    width: 15em; } }
+
+@keyframes typing3 {
+  from {
+    width: 0; }
+  to {
+    width: 20em; } }
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent; }
+  50% {
+    border-color: #1d99ed; } }
 
 @media screen and (min-width: 1171px) {
   .projects {

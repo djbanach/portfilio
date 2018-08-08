@@ -27,9 +27,42 @@ h3 {
   }
 
   &.sm-heading {
-    margin-bottom: 2rem;
+    width: 25.5em;
+    //margin-bottom: 2rem;
     padding: 0.2rem 1rem;
     background: rgba(lighten($primary-color, 2), 0.5);
+    overflow: hidden;
+    border-right: 0.15em solid $secondary-color;
+    white-space: nowrap;
+    margin: 0 0 2rem 0;
+    letter-spacing: 0.15em;
+    animation: typing 4s steps(60, end), blink-caret 0.75s step-end infinite;
+  }
+
+  &.sm-heading2 {
+    width: 15em;
+    //margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(lighten($primary-color, 2), 0.5);
+    overflow: hidden;
+    border-right: 0.15em solid $secondary-color;
+    white-space: nowrap;
+    margin: 0 0 2rem 0;
+    letter-spacing: 0.15em;
+    animation: typing2 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+
+  &.sm-heading3 {
+    width: 20em;
+    //margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(lighten($primary-color, 2), 0.5);
+    overflow: hidden;
+    border-right: 0.15em solid $secondary-color;
+    white-space: nowrap;
+    margin: 0 0 2rem 0;
+    letter-spacing: 0.15em;
+    animation: typing3 3s steps(50, end), blink-caret 0.75s step-end infinite;
   }
 }
 
@@ -143,12 +176,13 @@ main {
   }
 }
 
+// for projects page
 .btn-dark {
   @extend .btn;
   background: darken($primary-color, 50);
   color: #fff;
 }
-
+// for projects page
 .btn-light {
   @extend .btn;
   background: lighten($primary-color, 50);
@@ -161,6 +195,52 @@ main {
   background: darken($primary-color, 10);
   color: set-text-color($primary-color);
   height: 60px;
+}
+
+/*.sm-heading {
+  overflow: hidden;
+  border-right: 0.15em solid $secondary-color;
+  white-space: nowrap;
+  margin: 0 0;
+  letter-spacing: 0.15em;
+  animation: typing 4s steps(60, end), blink-caret 0.75s step-end infinite;
+}*/
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 25.5em;
+  }
+}
+
+@keyframes typing2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 15em;
+  }
+}
+
+@keyframes typing3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 20em;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: $secondary-color;
+  }
 }
 
 @import "mobile";
